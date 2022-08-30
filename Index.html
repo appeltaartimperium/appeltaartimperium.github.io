@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="bestelformulier.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="background-img-page" style="background-image: url(http://erin.web.roads-technology.nl/wp-content/uploads/2021/12/95Q9881-bewerkt-min-scaled.jpg);">
+	</div> -->
+    <order-forms>
+        <div class="order-item-group" id="spijs">			
+            <div class="box" style="background-image: url(https://appeltaartimperium.nl/wp-content/themes/yootheme/cache/HLM003-051-e1524226777492-a75445d5.jpg)" >
+                <div class="title">Ambachtelijke roomboter appeltaart met spijs</div>
+                <div class="ItemContainer">
+                    <div class="ItemButtons">
+                        <button onclick="testGrootFunc()" class="sizeButton">Normaal<br>(12 personen)</button>
+                        <button onclick="testKleinFunc()" class="sizeButton">Klein<br>(4-6 personen)</button>
+                        <button onclick="testInfoFunc()" class="sizeButton">Informatie<br>Contact</button>
+                    </div>
+                    <div class="SizeContainer" style="display: auto;">
+                        <div class="info" class="OrItemBox" id="InfoBox1" style="display: block;">
+                            <p>Ouderwets lekker met rum-rozijn zoals we ze al jarenlang bakken! Met of zonder krokante kruimellaag.</p>                       
+                        </div>
+                        <div class="OrItemBox" id="grootBox1" style="display: none;">
+                            <order-items id="Appeltaart met spijs 12 personen" title="Appeltaart" price="2100"></order-items>
+                            <order-items id="Appeltaart met spijs kruimel 12 personen" title="Kruimel" price="2200"></order-items>
+                            <order-items id="Appeltaart met spijs 12 personen ONGEBAKKEN" title="Appeltaart ONGEBAKKEN" price="1850"></order-items>
+                            <order-items id="Appeltaart met spijs kruimel ONGEBAKKEN 12 personen" title="kruimel ONGEBAKKEN" price="1950"></order-items>
+                        </div>
+                        <div class="OrItemBox" id="kleinBox1" style="display: none;">
+                            <order-items id="Appeltaart met spijs 4-6 personen" title="Appeltaart" price="1150"></order-items>
+                            <order-items id="Appeltaart met spijs kruimel 4-6 personen" title="Kruimel" price="1200"></order-items>
+                            <order-items id="Appeltaart met spijs 4-6 personen ONGEBAKKEN" title="Appeltaart ONGEBAKKEN" price="1050"></order-items>			
+                            <order-items id="Appeltaart met spijs kruimel ONGEBAKKEN 4-6 personen" title="kruimel ONGEBAKKEN" price="1075"></order-items>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>	
+    </order-forms>
+    <br>
+    <script src="bestelFormulier.js"></script>
+    <script src="contactFormSwitchSize.js"></script>
+</body>
+</html>
