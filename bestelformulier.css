@@ -78,7 +78,7 @@ extras{
 .ItemButtons {
 	width: 50%;
 	min-width: 355px;
-	background-color:rgba(255, 255, 255, 0.69);
+	/*background-color:rgba(255, 255, 255, 0.69);*/
 }
 .ItemContainer  {
 	width: 50%;
