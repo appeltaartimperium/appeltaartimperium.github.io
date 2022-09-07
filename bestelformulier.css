@@ -25,13 +25,13 @@ order-forms { /*everything inside the order form*/
 .order-item-group {
 	max-width: 806px;
 	margin: 0.2em;
-	float: left;
-	width: 80%;
+	float:inline-start;
+	width: 33%;
 	min-width: 355px;
 }
 order-items { /*order items nothing else*/
 	text-align:left;
-	width:50%;
+	width: 50%;
 }
 [price]{
     width: auto;
@@ -66,7 +66,7 @@ extras{
 	width: auto;
 	height: 240;
 	min-height: 240px ;
-	max-width: 800px;
+	max-width: 100%; /*800px*/
 	min-width: 355px;
 	background-position: top right;
 	background-repeat: no-repeat;
@@ -89,16 +89,16 @@ extras{
 .ItemButtons {
 	width: 50%;
 	min-width: 355px;
-	/*background-color:rgba(255, 255, 255, 0.69);*/
+	/*background-color:rgba(255, 255, 255, 0.5);*/
 }
 .ItemContainer  {
 	width: 50%;
 	min-width: 355px;
-	background-color:rgba(255, 255, 255, 0.69);
+	background-color:rgba(255, 255, 255, 0.5);
 	min-height: 240px ;
 }
 .title {
-	background-color:rgba(255, 255, 255, 0.69);
+	background-color:rgba(255, 255, 255, 0.5);
 	width: 50%;
 	min-width: 355px;
 }
@@ -111,4 +111,7 @@ extras{
 	max-width: calc(100% / 3);
 	height: 3em;
 	font-size: 14px;
+}
+.all-items-container {
+	width: 100%;
 }
