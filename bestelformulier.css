@@ -26,7 +26,7 @@ order-forms { /*everything inside the order form*/
 	max-width: 806px;
 	margin: 0.2em;
 	float: left;
-	width: 50%;
+	width: 80%;
 	min-width: 355px;
 }
 order-items { /*order items nothing else*/
