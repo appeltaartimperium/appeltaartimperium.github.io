@@ -25,7 +25,7 @@ order-forms { /*everything inside the order form*/
 .order-item-group {
 	max-width: 806px;
 	margin: 0.2em;
-	float:inline-start;
+	float:left;
 	width: 33%;
 	min-width: 355px;
 }
@@ -95,7 +95,7 @@ extras{
 	width: 50%;
 	min-width: 355px;
 	background-color:rgba(255, 255, 255, 0.5);
-	min-height: 240px ;
+	min-height: 240px;
 }
 .title {
 	background-color:rgba(255, 255, 255, 0.5);
