@@ -1,0 +1,129 @@
+/*
+Testing flexbox in combination with js and custom html tags for appeltaart imperium order form.
+
+The flexbox is structered like this,
+
+0|FOREST|(main Flexbox)-> the container(div) for everything to do with the order form.
+    1|TREE|(box per TREE-type within the FOREST)->  container(div) for everything to do with a specific type of pie.
+        2|BRENCH|(boxes of content-type for the specific TREE)-> the containers (divs) for the content within a specific pie.
+            3|TWIG|(content or boxes for content-variations)->  the content or the containers for the variations of the the contents .
+                4|LEAF|(content) - every individual piece of content or item. 
+*/
+.subTitle{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.test1{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+}
+.bestelInfo{
+    margin: 1em;
+    max-width: 335px;
+}
+.all-items-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.box{
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 300px; 
+	width: 355px;
+    min-width: 275px;
+    background-color: rgb(255, 255, 255, 0.5);
+    margin: 0.2em;
+    border-style:solid;
+    border-width: 0.15em;
+    border-color: rgb(0, 0, 0, 0,2);
+    border-radius: 3mm;
+}
+.OrItemBox{
+    background-color: rgb(255, 255, 255, 0.7);
+}
+.info{
+    max-width: 355px;
+    background-color: rgb(255, 255, 255, 0.7);
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-width: 0.15em;
+    border-bottom-color: lightgreen;
+
+}
+.SizeContainer{
+    color: black;
+    /*background-color: rgb(255, 255, 255, 0.6); */
+}
+.ItemButtons{
+    background-color: rgb(255, 255, 255, 0.5);
+    border-bottom-style: solid;
+    border-width: .20em;
+    border-color: lightgreen;
+    display: flex;
+    justify-content: space-evenly;
+}
+.title{
+    font-weight: bold;
+    background-color: rgb(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.4;
+    font-family: lato;
+    text-transform: uppercase;
+    border-top-left-radius: 3mm;
+    border-top-right-radius: 3mm;
+    border-bottom-style: solid;
+    border-width: .20em;
+    border-color: lightgreen;
+    
+
+}
+.testBR{
+    background-color: rgb(255, 255, 255, 0.5); 
+}
+#DiversBR{
+    border-bottom-style: solid;
+    border-width: .20em;
+    border-color: lightgreen;
+}
+/*#grootBox4{
+    border-top-style: solid;
+    border-width: .20em;
+    border-color: lightgreen;
+    background-color: rgb(255, 255, 255, 0.5); 
+}
+#kleinBox4{
+    border-top-style: solid;
+    border-width: .20em;
+    border-color: lightgreen;
+    background-color: rgb(255, 255, 255, 0.5); 
+}*/
+order-items{
+    font-weight: bold;
+    max-width: 355px;
+    /*background-color: rgb(255, 255, 255, 0.6);*/
+    border-bottom-style: solid;
+    border-width: 0.5em;
+    border-color: rgb(255, 255, 255, 0.0);
+    border-bottom-color: lightgreen;
+    border-bottom-width: 0.15em;
+    
+}
+/*#gember-sinaasappel-info{
+    border-bottom-style: solid;
+    border-bottom-width: 0.5em;
+    border-color: rgba(225, 225, 225, 0.0);
+}*/
+#divers-info{
+    border-bottom-style: solid;
+    border-width: .20em;
+    border-color: lightgreen;
+}
+.VegaSize {
+    text-align: center;
+    font-weight: bold;
+}
