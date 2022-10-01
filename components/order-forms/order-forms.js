@@ -1,6 +1,7 @@
 customElements.define(
   "order-forms",
   class extends OrdersHTMLElement {
+    
     get total() {
       let itemCount = 0;
       let itemSummary = "Besteld:\n";
