@@ -1,13 +1,5 @@
 /*
 Testing flexbox in combination with js and custom html tags for appeltaart imperium order form.
-
-The flexbox is structered like this,
-
-0|FOREST|(main Flexbox)-> the container(div) for everything to do with the order form.
-    1|TREE|(box per TREE-type within the FOREST)->  container(div) for everything to do with a specific type of pie.
-        2|BRENCH|(boxes of content-type for the specific TREE)-> the containers (divs) for the content within a specific pie.
-            3|TWIG|(content or boxes for content-variations)->  the content or the containers for the variations of the the contents .
-                4|LEAF|(content) - every individual piece of content or item. 
 */
 .subTitle{
     display: flex;
@@ -82,6 +74,7 @@ The flexbox is structered like this,
     
 
 }
+/*a div with 1 <br> to make it editable by css*/
 .testBR{
     background-color: rgb(255, 255, 255, 0.5); 
 }
