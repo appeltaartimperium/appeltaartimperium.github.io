@@ -3,7 +3,20 @@
 // get component name from directory name
 let [BaseClass, componentName] = import.meta.url.split("/").slice(-3);
 // ================================================================
-
+const items = {
+  roomboter_spijs: {
+    title: "Ambachtelijke roomboter appeltaart met spijs",
+    description: `Ouderwets lekker met rum-rozijnen zoals we ze al jarenlang bakken! Met of zonder krokante kruimellaag.`,
+    large: {},
+    small: [
+      {
+        id: "Appeltaart met spijs 12 personen",
+        title: "Appeltaart",
+        price: "2100",
+      },
+    ],
+  },
+};
 customElements.define(
   componentName,
   class extends customElements.get(BaseClass) {
