@@ -3,7 +3,7 @@
 // get component name from directory name
 let [BaseClass, componentName] = import.meta.url.split("/").slice(-3);
 // ================================================================
-
+let uri = import.meta.url;
 customElements.define(
   componentName,
   class extends customElements.get(BaseClass) {

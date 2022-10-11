@@ -22,7 +22,12 @@ customElements.define(
     }
     // ---------------------------------------------------------------- getTemplate
     getTemplate(template_id = this.nodeName) {
-      return document.getElementById(template_id).content.cloneNode(true);
+      let template = document.getElementById(template_id);
+      if (template) return template.content.cloneNode(true);
+      else {
+        console.warn("Template not found:", template_id);
+        return document.createElement("span");
+      }
     }
     // ---------------------------------------------------------------- pricelist
     pricelist(atr, cnt, discountTotal = false) {

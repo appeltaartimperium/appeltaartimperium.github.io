@@ -23,38 +23,6 @@
             display: none;
         } */
     </style>
-    <template id="ORDER-ITEM-CONTAINER">
-        <style>
-            :host {
-                background: pink;
-                border: 5px dashed red;
-            }
-
-            ::slotted(order-item) {
-                display: none;
-            }
-
-            slot[name*="pie"] {
-                display: none;
-            }
-        </style>
-        <style id="piesize">
-            /* Web Component injects style
-            slot[name="largepie"] {
-                display: inherit;
-            } */
-        </style>
-        <div class="title">
-            <slot name="title">[TITLE]</slot>
-        </div>
-        <order-buttons></order-buttons>
-        <slot name="largepie" part="largepie">[LARGEPIE]</slot>
-        <slot name="smallpie" part="smallpie">[SMALLPIE]</slot>
-        <div class="info">
-            <slot name="description">[DESCRIPTION]</slot>
-        </div>
-        <slot>ANY remaining content</slot>
-    </template>
 
     <header>
         <div class="title" id="">bestelling plaatsen</div>
