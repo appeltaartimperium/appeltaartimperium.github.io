@@ -10,7 +10,7 @@
 
 ### Overruled files
 
-A ``?dev-order-items=FILENAME`` in the URL **OR** localStorage setting can be used to overrule the component file.
+A ``?dev-order-item=FILENAME`` in the URL **OR** localStorage setting can be used to overrule the component file.
 
 ## Documentation Web Components
 
@@ -18,7 +18,7 @@ A ``?dev-order-items=FILENAME`` in the URL **OR** localStorage setting can be us
 
 Container for all order forms
 
-### <order-items>
+### <order-item>
 
 ### <order-buttons>
 

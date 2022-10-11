@@ -102,7 +102,7 @@ The flexbox is structered like this,
     border-color: lightgreen;
     background-color: rgb(255, 255, 255, 0.5); 
 }*/
-order-items{
+order-item{
     font-weight: bold;
     max-width: 355px;
     /*background-color: rgb(255, 255, 255, 0.6);*/

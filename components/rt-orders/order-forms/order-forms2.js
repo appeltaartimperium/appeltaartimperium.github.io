@@ -10,7 +10,7 @@ customElements.define(
     get total() {
       let itemCount = 0;
       let itemSummary = "Besteld:\n";
-      let totalCost = [...this.querySelectorAll("order-items")].reduce(
+      let totalCost = [...this.querySelectorAll("order-item")].reduce(
         (total, item) => {
           let { count, cost } = item;
           if (cost) {

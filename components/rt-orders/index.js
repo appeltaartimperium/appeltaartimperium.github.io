@@ -10,7 +10,7 @@ let baseclassModule = await import(`./baseclass.js`);
 console.log("Loaded: BaseClass", baseclassModule);
 
 // define all child Components based on this BaseClass
-let components = ["order-buttons", "order-forms", "order-items"];
+let components = ["order-item-container","order-buttons", "order-forms", "order-item"];
 
 Promise.all(
   components.map((componentName) => import(`./${componentName}/index.js`))

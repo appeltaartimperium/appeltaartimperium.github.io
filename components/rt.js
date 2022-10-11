@@ -46,9 +46,10 @@ export function loadComponent(url, filename = false) {
   import(uri)
     .then((module) => {
       console.log("loaded", uri, module);
-      module.default();
+      //if export default defined in module file then:
+      //module.default();
     })
     .catch((err) => {
-      console.error("failed import", uri);
+      console.error("failed import", uri,err);
     });
 }

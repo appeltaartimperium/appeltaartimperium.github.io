@@ -12,22 +12,15 @@ customElements.define(
       this.style.display = "flex";
       this.style.justifyContent = "space-evenly";
       this.innerHTML =
-        /* css */ `ItemButtons{}` +
         /*html*/ `<div class="ItemButtons"></div>` +
-        /*html*/ `<button class="sizeButton sizeButton1">Normaal<br>(12 personen)</button>` +
-        /*html*/ `<button class="sizeButton sizeButton2">Klein<br>(4-6 personen)</button>` +
+        /*html*/ `<button id="large" class="sizeButton sizeButton1">Normaal<br>(12 personen)</button>` +
+        /*html*/ `<button id="small" class="sizeButton sizeButton2">Klein<br>(4-6 personen)</button>` +
         /*html*/ `</div>`;
-      this.querySelector(".sizeButton1").onclick = (evt) => {
-        // todo dispatch Event to show Large pie choices
-        //this.dispatch("sizeButton1")
-      };
-      this.querySelector(".sizeButton2").onclick = (evt) => {
-        //this.dispatch("sizeButton2")
-      };
+      this.querySelector(".sizeButton1").onclick = (evt) => this.switchsize(evt.target.id);
+      this.querySelector(".sizeButton2").onclick = (evt) => this.switchsize(evt.target.id);
+    }
+    switchsize(piesize) {
+      this.$dispatch({ name: "piesize", detail: piesize });
     }
   }
 );
-
-export default function () {
-  console.warn(666);
-}
