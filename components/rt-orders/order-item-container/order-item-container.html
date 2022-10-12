@@ -1,6 +1,7 @@
 <template id="ORDER-ITEM-CONTAINER">
     <style>
         :host {
+            display: inline-block;
             background: pink;
             border: 5px dashed red;
         }
@@ -10,14 +11,12 @@
         }
 
         slot[name*="pie"] {
+            /* hide both largepie and smallpie items */
             display: none;
         }
     </style>
     <style id="piesize">
-        /* Web Component injects style
-        slot[name="largepie"] {
-            display: inherit;
-        } */
+        /* Web Component injects style for largepie/smallpie here */
     </style>
     <div class="title">
         <slot name="title">[TITLE]</slot>
