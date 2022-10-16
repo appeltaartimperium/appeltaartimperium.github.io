@@ -30,11 +30,23 @@ customElements.define(
       }
     }
     // ---------------------------------------------------------------- pricelist
-    pricelist(atr, cnt, discountTotal = false) {
-      let p = this.Attr(atr).split(",");
-      let prices = new Array(11).fill(discountTotal || p[p.length - 1]); // lowestprice
-      p.map((v, i) => (prices[i + 1] = v)); // Arrays start 0; overwrite prices Array with defined prices
-      return prices[cnt] * (discountTotal || 0.01); // percentage or /100
+    pricelist(prices_attr, count, discountTotal = false) {
+      // return price for count (items)
+      // 1 and 2 buy for 13.00
+      // 3 buy for 11.00
+      // 4 buy for 10.00
+      // read price(s) "1300,1300,1100,1000"
+      let pricesArray = this.Attr(prices_attr).split(",");
+      let lastPrice = pricesArray.slice(-1)[0];
+      // make enough array items, store discountTotal OR  LAST price
+      let prices = new Array(11).fill(discountTotal || lastPrice); // lowestprice
+      // Arrays start 0; overwrite prices Array with defined prices
+      pricesArray.map((price, idx) => {
+        // +1 so count parameter doesn't start at 0
+        return (prices[idx + 1] = price);
+      });
+      //return price at index
+      return prices[count] * (discountTotal || 0.01); // percentage or /100
     }
     // ----------------------------------------------------------------
     $dispatch({
