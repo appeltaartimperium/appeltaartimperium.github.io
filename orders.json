@@ -12,49 +12,49 @@
                 {
                     "id": "Appeltaart met spijs 12 personen",
                     "title": "Appeltaart",
-                    "price": "2100"
+                    "price": 2100
                 },
                 {
                     "id": "Appeltaart met spijs 12 personen",
                     "title": "Appeltaart",
-                    "price": "2100"
+                    "price": 2100
                 },
                 {
                     "id": "Appeltaart met spijs kruimel 12 personen",
                     "title": "Kruimel",
-                    "price": "2200"
+                    "price": 2200
                 },
                 {
                     "id": "Appeltaart met spijs 12 personen ONGEBAKKEN",
                     "title": "Appeltaart ONGEBAKKEN",
-                    "price": "1850"
+                    "price": 1850
                 },
                 {
                     "id": "Appeltaart met spijs kruimel ONGEBAKKEN 12 personen",
                     "title": "Kruimel ONGEBAKKEN",
-                    "price": "1950"
+                    "price": 1950
                 }
             ],
             "large": [
                 {
                     "id": "Appeltaart met spijs 4-6 personen",
                     "title": "Appeltaart",
-                    "price": "1150"
+                    "price": 1150
                 },
                 {
                     "id": "Appeltaart met spijs kruimel 4-6 personen",
                     "title": "Kruimel",
-                    "price": "1200"
+                    "price": 1200
                 },
                 {
                     "id": "Appeltaart met spijs 4-6 personen ONGEBAKKEN",
                     "title": "Appeltaart ONGEBAKKEN",
-                    "price": "1050"
+                    "price": 1050
                 },
                 {
                     "id": "Appeltaart met spijs kruimel ONGEBAKKEN 4-6 personen",
                     "title": "Kruimel ONGEBAKKEN",
-                    "price": "1075"
+                    "price": 1075
                 }
             ]
         },
@@ -67,44 +67,44 @@
                 {
                     "id": "Appeltaart 12 personen",
                     "title": "Appeltaart",
-                    "price": "1750"
+                    "price": 1750
                 },
                 {
                     "id": "Appeltaart kruimel 12 personen",
                     "title": "Kruimel",
-                    "price": "1850"
+                    "price": 1850
                 },
                 {
                     "id": "Appeltaart 12 personen ONGEBAKKEN",
                     "title": "Appeltaart ONGEBAKKEN",
-                    "price": "1500"
+                    "price": 1500
                 },
                 {
                     "id": "Appeltaart kruimel ONGEBAKKEN 12 personen",
                     "title": "Kruimel ONGEBAKKEN",
-                    "price": "1600"
+                    "price": 1600
                 }
             ],
             "small": [
                 {
                     "id": "Appeltaart 4-6 personen",
                     "title": "Appeltaart",
-                    "price": "950"
+                    "price": 950
                 },
                 {
                     "id": "Appeltaart kruimel 4-6 personen",
                     "title": "Kruimel",
-                    "price": "1000"
+                    "price": 1000
                 },
                 {
                     "id": "Appeltaart 4-6 personen ONGEBAKKEN",
                     "title": "Appeltaart ONGEBAKKEN",
-                    "price": "850"
+                    "price": 850
                 },
                 {
                     "id": "Appeltaart kruimel ONGEBAKKEN 4-6 personen",
                     "title": "Kruimel ONGEBAKKEN",
-                    "price": "900"
+                    "price": 900
                 }
             ]
         },
@@ -117,22 +117,22 @@
                 {
                     "id": "rasptaart 12 personen",
                     "title": "Rasptaart",
-                    "price": "1850"
+                    "price": 1850
                 },
                 {
                     "id": "Rasptaart kruimel 12 personen",
                     "title": "Kruimel",
-                    "price": "1950"
+                    "price": 1950
                 },
                 {
                     "id": "Rasptaart 12 personen ONGEBAKKEN",
                     "title": "Rasptaart ONGEBAKKEN",
-                    "price": "1600"
+                    "price": 1600
                 },
                 {
                     "id": "Rasptaart kruimel 12 personen ONGEBAKKEN",
                     "title": "Kruimel ONGEBAKKEN",
-                    "price": "1700"
+                    "price": 1700
                 }
             ],
             "small": [
@@ -144,17 +144,17 @@
                 {
                     "id": "Rasptaart kruimel 4-6 personen",
                     "title": "Kruimel",
-                    "price": "1025"
+                    "price": 1025
                 },
                 {
                     "id": "Rasptaart 4-6 personen ONGEBAKKEN",
                     "title": "Rasptaart ONGEBAKKEN",
-                    "price": "875"
+                    "price": 875
                 },
                 {
                     "id": "Rasptaart kruimel 4-6 personen ONGEBAKKEN",
                     "title": "Kruimel ONGEBAKKEN",
-                    "price": "925"
+                    "price": 925
                 }
             ]
         },
@@ -167,14 +167,14 @@
                 {
                     "id": "Veganistische appeltaart 12 personen",
                     "title": " Vegan   p.s.",
-                    "price": "1900"
+                    "price": 1900
                 }
             ],
             "small": [
                 {
                     "id": "Veganistische appeltaart 4-6 personen",
                     "title": " Vegan   p.s.",
-                    "price": "1050 "
+                    "price": 1050
                 }
             ]
         },
@@ -186,7 +186,12 @@
                 {
                     "id": "Mini appel-kruimeltaartjes 4 voor €8,-",
                     "title": "Eén persoons appel-kruimeltaartjes. 4 voor €8,-",
-                    "price": [225,225,225,200]
+                    "price": [
+                        225,
+                        225,
+                        225,
+                        200
+                    ]
                 },
                 {
                     "id": "diversen-overig",
