@@ -14,15 +14,15 @@ A ``?dev-order-item=FILENAME`` in the URL **OR** localStorage setting can be use
 
 ## Documentation Web Components
 
-### <order-forms>
+### <order-form>
 
-Container for all order forms
+Container for all order form
 
 ### <order-item-container>
 
 ### <order-item>
 
-### <order-buttons>
+### <order-button>
 
 ## Style Guide
 

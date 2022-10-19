@@ -37,19 +37,43 @@ customElements.define(
     // ---------------------------------------------------------------- addOrderItemContainer
     addOrderItemContainer({ config, category }) {
       let { id, title, description, img, items, small, large } = category;
-      let container = document.createElement("order-item-container");
+      let container = this.$createElement({
+        tag: "order-item-container",
+        attrs: { piesize: "large" },
+        children: [
+          this.$createElement({ tag: "span", slot: "title" }),
+          this.addOrderItems("smallpie", small),
+          this.$createElement({ tag: "span", slot: "description" }),
+        ],
+      });
       // set background image
       container.style = `background-image: url(${config.imgpath}${img});background-size:cover;background-position:center;`;
 
-      container.setAttribute("piesize", "large");
       // fill <slot>
       container.innerHTML =
         `<span slot="title">${title}</span>` +
-        `<span slot="smallpie">Small Appeltaart</span>` +
+        //`<span slot="smallpie">Small Appeltaart</span>` +
         `<span slot="largepie">Large Appeltaart</span>` +
         `<span slot="description">${description}</span>`;
       console.log(id, title);
       return container;
+    }
+    // ---------------------------------------------------------------- addOrderItems
+    addOrderItems(slot, items) {
+      if (items) {
+        return this.$createElement({
+          tag: "span",
+          slot,
+          children: items.map((item) => {
+            return this.$createElement({
+              tag: "order-item",
+              attrs: item,
+            });
+          }),
+        });
+      } else {
+        return "";
+      }
     }
     // ---------------------------------------------------------------- total
     get total() {
@@ -94,11 +118,11 @@ customElements.define(
 
       let totalElement = this.querySelector(".orderTotal");
       if (totalElement) {
-        totalElement.innerHTML = this.$(totalCost);
+        totalElement.innerHTML = this.$euro(totalCost);
       } else {
         warning("No .orderTotal defined");
       }
       return totalCost;
     } // get total
   } // end of class
-); // define order-forms
+); // define order-form

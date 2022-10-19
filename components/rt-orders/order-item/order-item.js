@@ -12,25 +12,25 @@ customElements.define(
       this.style.display = "block";
       if (count > 10 || count < 1) count = 0;
       this.setAttribute("count", count);
-      
+
       // attr is the correct value
       let button = (x, id, ibtn) =>
-      `<button id="${id}" class="${ibtn}" onclick="this.parentNode.count${x}">${x[0]}</button>`;
+        `<button id="${id}" class="${ibtn}" onclick="this.parentNode.count${x}">${x[0]}</button>`;
       this.innerHTML =
-      button(
-        "--",
-        "min",
-        "minus"
+        button(
+          "--",
+          "min",
+          "minus"
         ) /* comment out this line to remove minus button*/ +
         button("++", "plus", "plusus") +
         `<count> ${count} </count>` +
-        (count ? " " + this.$(this.cost) : "") +
+        (count ? " " + this.$euro(this.cost) : "") +
         ` ${this.Attr("title")} ` +
-        ` ${this.$(this.price)} `;
+        ` ${this.$euro(this.price)} `;
       // if count = 0 hide min button
-      //  ${count || ""}  ${this.$(this.price)} ` +
+      //  ${count || ""}  ${this.$euro(this.price)} ` +
       // subtotal if count>0
-      setTimeout(() => this.closest("order-forms").total); // trigger total update
+      setTimeout(() => this.closest("order-form").total); // trigger total update
     }
     // ---------------------------------------------------------------- count
     get count() {
@@ -40,6 +40,10 @@ customElements.define(
       this.connectedCallback(p);
     }
     // ---------------------------------------------------------------- price
+    get prices() {
+      // String "250,200,200" to Array [250,200,200]
+      return this.Attr2NumberArray("price");
+    }
     get price() {
       return this.pricelist("price", this.count);
     }

@@ -14,8 +14,8 @@ export function dispatch({ name, root = document }) {
 async function loadTemplate(componentName, url) {
   try {
     let response = await fetch(url);
-    let html = await response.text();
     if (response.ok) {
+      let html = await response.text(); // wait for text stream to be read
       //console.warn("load template",componentName, dom.querySelector("template"));
       document.head.insertAdjacentHTML("beforeend", html);
       console.warn("load template", componentName);

@@ -5,16 +5,55 @@ let [BaseClass, componentName] = import.meta.url.split("/").slice(-3);
 // ================================================================
 
 // ================================================================
+class BaseClassHTMLElement extends HTMLElement {
+  // ---------------------------------------------------------------- $createElement
+  $createElement(
+    {
+      tag = "div",
+      innerHTML = "",
+      classes = [],
+      attrs = {},
+      children = [],
+      ...props
+    } = {},
+    // advanced configuration:
+    {
+      root = this.shadowRoot || this, //!! default root is shadowRoot
+      insertroot = "append", //!! default  append (or: prepend)
+      insertchildren = "append", //!! append (or: prepend) children
+    } = {}
+  ) {
+    tag = document.createElement(tag);
+    //this.setAttributes(attrs, el);
+    Object.keys(attrs).map((key) => tag.setAttribute(key, attrs[key]));
+    classes.length && tag.classList.add(...classes);
+    Object.assign(tag, props);
+    innerHTML && (tag.innerHTML = innerHTML);
+    tag[insertchildren](...children);
+    root && root[insertroot](tag);
+    return tag;
+  }
+  // ----------------------------------------------------------------
+}
+// ================================================================
 customElements.define(
   componentName,
-  class extends HTMLElement {
+  class extends BaseClassHTMLElement {
     // ---------------------------------------------------------------- Attr
     Attr(name, defaultValue = "") {
       return this.getAttribute(name) || defaultValue;
     }
+    Attr2NumberArray(attr) {
+      // String "250,200,200" to Array [250,200,200]
+      return this.Attr(attr)
+        .split(",")
+        .map(
+          (x) => Number(x) || console.error(attr, "contains illegal number", x)
+        );
+    }
     // ---------------------------------------------------------------- $
     // format value as Euro NL currency string
-    $(value) {
+    $euro(value) {
       return Intl.NumberFormat("nl-NL", {
         style: "currency",
         currency: "eur",
@@ -36,7 +75,7 @@ customElements.define(
       // 3 buy for 11.00
       // 4 buy for 10.00
       // read price(s) "1300,1300,1100,1000"
-      let pricesArray = this.Attr(prices_attr).split(",");
+      let pricesArray = this.prices; // from order-item.js
       let lastPrice = pricesArray.slice(-1)[0];
       // make enough array items, store discountTotal OR  LAST price
       let prices = new Array(11).fill(discountTotal || lastPrice); // lowestprice
