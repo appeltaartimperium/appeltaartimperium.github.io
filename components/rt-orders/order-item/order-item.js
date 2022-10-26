@@ -30,7 +30,7 @@ customElements.define(
       // if count = 0 hide min button
       //  ${count || ""}  ${this.$euro(this.price)} ` +
       // subtotal if count>0
-      setTimeout(() => this.closest("order-form").total); // trigger total update
+      //setTimeout(() => this.closest("order-form").total); // trigger total update
     }
     // ---------------------------------------------------------------- count
     get count() {

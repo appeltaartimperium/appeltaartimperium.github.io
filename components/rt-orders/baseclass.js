@@ -13,7 +13,7 @@ class BaseClassHTMLElement extends HTMLElement {
       innerHTML = "",
       classes = [],
       attrs = {},
-      children = [],
+      Elements = [],
       ...props
     } = {},
     // advanced configuration:
@@ -29,7 +29,7 @@ class BaseClassHTMLElement extends HTMLElement {
     classes.length && tag.classList.add(...classes);
     Object.assign(tag, props);
     innerHTML && (tag.innerHTML = innerHTML);
-    tag[insertchildren](...children);
+    tag[insertchildren](...Elements.flat());
     root && root[insertroot](tag);
     return tag;
   }

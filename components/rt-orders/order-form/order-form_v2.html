@@ -1,4 +1,4 @@
-<template id="ORDER-FORMS">
+<template id="ORDER-FORM">
     <style>
         :host {
             display: inline-block;
@@ -7,6 +7,10 @@
         }
     </style>
     <div class="all-items-container">
+        <!-- 
+            <order-item-container> are injected in lightDOM 
+                thus shown in the default <slot>
+            -->
         <slot></slot>
     </div>
 </template>

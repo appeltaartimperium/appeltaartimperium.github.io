@@ -21,8 +21,7 @@ customElements.define(
       if (orderJSON) {
         fetch(`./${orderJSON}`)
           .then((res) => res.json())
-          .then((data) => {
-            let { config, categories } = data;
+          .then(({ config, categories }) => {
             this.append(
               ...Object.keys(categories).map((key) => {
                 return this.addOrderItemContainer({
@@ -40,22 +39,17 @@ customElements.define(
       let container = this.$createElement({
         tag: "order-item-container",
         attrs: { piesize: "large" },
-        children: [
+        Elements: [
           this.$createElement({ tag: "span", slot: "title" }),
+          this.addOrderItems("items", items),
           this.addOrderItems("smallpie", small),
+          this.addOrderItems("largepie", large),
           this.$createElement({ tag: "span", slot: "description" }),
         ],
       });
       // set background image
       container.style = `background-image: url(${config.imgpath}${img});background-size:cover;background-position:center;`;
 
-      // fill <slot>
-      container.innerHTML =
-        `<span slot="title">${title}</span>` +
-        //`<span slot="smallpie">Small Appeltaart</span>` +
-        `<span slot="largepie">Large Appeltaart</span>` +
-        `<span slot="description">${description}</span>`;
-      console.log(id, title);
       return container;
     }
     // ---------------------------------------------------------------- addOrderItems
@@ -64,10 +58,12 @@ customElements.define(
         return this.$createElement({
           tag: "span",
           slot,
-          children: items.map((item) => {
+          Elements: items.map(({ id, title, price }) => {
             return this.$createElement({
               tag: "order-item",
-              attrs: item,
+              id,
+              title,
+              attrs: { price },
             });
           }),
         });
