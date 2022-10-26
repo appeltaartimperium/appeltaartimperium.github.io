@@ -29,7 +29,7 @@
     border-style:solid;
     border-width: 0.15em;
     border-color: rgb(0, 0, 0, 0,2);
-    border-radius: 3mm;
+    border-radius: 3mm; 
 }
 .OrItemBox{
     background-color: rgb(255, 255, 255, 0.7);
