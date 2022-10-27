@@ -22,6 +22,13 @@
         *::part(largepie) {
             display: none;
         } */
+        order-item-container{
+            width: 355px;
+            border:10px solid green;
+            display: flex;
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
     </style>
 
     <header>
@@ -43,7 +50,7 @@
         </div>
     </header>
     <h2>Create HTML from orders.json</h2>
-    <order-form imagepath="" orders="orders.json">
+    <order-form imagepath="" orders="orders.json" style="width:100%;">
     </order-form>
     <hr>
     <h2>Erins HTML (Zonder correcte css):</h2>
