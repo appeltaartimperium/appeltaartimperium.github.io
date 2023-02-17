@@ -3,6 +3,7 @@
 // get component name from directory name
 let [BaseClass, componentName] = import.meta.url.split("/").slice(-3);
 // ================================================================
+//not finished!
 const BUTTON = "rt-button";
 customElements.whenDefined("rt-button").then(() => {
   customElements.define(
@@ -10,6 +11,7 @@ customElements.whenDefined("rt-button").then(() => {
     class extends customElements.get("rt-button") {
       connectedCallback() {
         this.style.width = "100%";
+        // this.style.background-color = "red"; (gives error?).
         this.style.display = "flex";
         this.style.justifyContent = "space-evenly";
         this.innerHTML =
